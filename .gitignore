@@ -1,0 +1,4 @@
+TestFiles/
+node_modules/
+
+.env

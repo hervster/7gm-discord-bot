@@ -1,0 +1,15 @@
+{
+  "name": "7gm-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for interacting in 7 Good Men Discord Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Herve Nyemeck",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0"
+  }
+}
