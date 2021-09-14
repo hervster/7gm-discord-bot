@@ -10,7 +10,7 @@ module.exports = async function (msg, args)
     const file = new MessageAttachment(baseFilePath + gifName + fileExt + fileParam );
 
     if (gifName === undefined)
-        msg.reply("Include a fucking name")
+        msg.reply("Please include a name")
     else
         msg.channel.send( { files: [file] } );
 }
