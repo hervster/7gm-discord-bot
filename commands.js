@@ -1,17 +1,12 @@
 const vid = require("./commands/vid.js");
 const img = require("./commands/img.js");
 const gif = require("./commands/gif.js");
+const webm = require("./commands/webm.js");
 const list = require("./commands/list.js");
 const help = require("./commands/help.js");
 
-/*
-module.exports = async function (msg) {
-    if (msg.content === "Yo Yo")
-            msg.reply("ayooooo");
-}
-*/
 
-const commands = { vid, gif, img, list, help };
+const commands = { vid, gif, img, list, help, webm };
 
 module.exports = async function (msg) {
     let tokens = msg.content.split(" ");
