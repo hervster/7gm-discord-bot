@@ -15,8 +15,10 @@ module.exports = async function (msg) {
     if (command.charAt(0) === "!"){
         command = command.substring(1);
 
-        // Try catch for non commands, type error exception
-        // Commands const is like lookup
-        commands[command](msg, tokens);
+        if ( (command in commands) ){
+            commands[command](msg, tokens);
+        } else {
+            msg.reply("Please format your command correctly, or ensure you're using an available command");
+        }
     }
 }

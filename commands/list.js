@@ -26,7 +26,7 @@ module.exports = async function (msg, args)
             {
                 if ( item.substring(item.length-4, item.length) === '.gif' )
                 {
-                    listEmbed.addField( "GIF", item.substring( 0, item.length-4) ) 
+                    listEmbed.addField( "GIF", item.substring( 0, item.length-4), true ) 
                 } 
             } 
             )
@@ -46,7 +46,7 @@ module.exports = async function (msg, args)
             {
                 if ( item.substring(item.length-4, item.length) === '.mp4' )
                 {
-                    listEmbed.addField( "VID", item.substring( 0, item.length-4) ) 
+                    listEmbed.addField( "VID", item.substring( 0, item.length-4), true ) 
                 } 
             } 
             )
@@ -66,7 +66,7 @@ module.exports = async function (msg, args)
             {
                 if ( item.substring(item.length-4, item.length) === '.png' )
                 {
-                    listEmbed.addField( "IMG", item.substring( 0, item.length-4) ) 
+                    listEmbed.addField( "IMG", item.substring( 0, item.length-4), true ) 
                 } 
             } 
             )
@@ -88,7 +88,7 @@ module.exports = async function (msg, args)
             {
                 if ( item.substring(item.length-5, item.length) === '.webm' )
                 {
-                    listEmbed.addField( "WEBM", item.substring( 0, item.length-5) ) 
+                    listEmbed.addField( "WEBM", item.substring( 0, item.length-5), true ) 
                 } 
             } 
             )
