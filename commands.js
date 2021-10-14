@@ -4,9 +4,10 @@ const gif = require("./commands/gif.js");
 const webm = require("./commands/webm.js");
 const list = require("./commands/list.js");
 const help = require("./commands/help.js");
+const sevenGMA = require("./commands/sevenGMA.js");
 
 
-const commands = { vid, gif, img, list, help, webm };
+const commands = { vid, gif, img, list, help, webm, sevenGMA };
 
 module.exports = async function (msg) {
     let tokens = msg.content.split(" ");
@@ -17,7 +18,13 @@ module.exports = async function (msg) {
 
         if ( (command in commands) ){
             commands[command](msg, tokens);
-        } else {
+        } else if ( command.charAt(0) == "7")
+        {
+            console.log("Command is:");
+            console.log(command);
+            commands["sevenGMA"](msg, tokens)
+        }
+        else {
             msg.reply("Please format your command correctly, or ensure you're using an available command");
         }
     }
