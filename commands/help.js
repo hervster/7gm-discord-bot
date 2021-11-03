@@ -14,6 +14,7 @@ const helpEmbed = new MessageEmbed()
         { name: '!gif {name}', value: 'Grab a gif with the given name', inline: false },
         { name: '!img {name}', value: 'Grab an image with the given name', inline: false },
         { name: '!webm {name}', value: 'Grab a webm with the given name', inline: false },
+        { name: '!7gma', value: 'Displays the Seven Good Men calling card', inline: false },
         { name: '!list {command name}', value: 'Grab a list of all files for a given command', inline: false },
     )
     .setImage('https://github.com/hervster/7gm-discord-bot/blob/main/Resources/Images/Gifs/KawhiConfused.gif?raw=true')
