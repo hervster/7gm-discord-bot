@@ -18,10 +18,7 @@ module.exports = async function (msg) {
 
         if ( (command in commands) ){
             commands[command](msg, tokens);
-        } else if ( command.charAt(0) == "7")
-        {
-            console.log("Command is:");
-            console.log(command);
+        } else if ( (command.charAt(0) == "7" ) && (command.substring(1) == "gma")){
             commands["sevenGMA"](msg, tokens)
         }
         else {
