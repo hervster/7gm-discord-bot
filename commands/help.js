@@ -22,7 +22,7 @@ const helpEmbed = new EmbedBuilder()
     )
     .setImage('https://github.com/hervster/7gm-discord-bot/blob/main/Resources/Images/Gifs/KawhiConfused.gif?raw=true')
     .setTimestamp()
-    .setFooter('Have Fun', 'https://github.com/hervster/7gm-discord-bot/blob/main/Resources/Images/2Face.png?raw=true');
+    .setFooter({text: 'Have Fun', iconURL: 'https://github.com/hervster/7gm-discord-bot/blob/main/Resources/Images/2Face.png?raw=true'});
 
 module.exports = async function (msg, args)
 {

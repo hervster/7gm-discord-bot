@@ -1,8 +1,16 @@
-version: '3.8'
-
 services:
   7gm-bot:
     build:
     container_name: 7gm-bot
     restart: unless-stopped
     environment:
+      - BOT_TOKEN=YOUR_DISCORD_BOT_TOKEN
+      - BASE_GIF_PATH=./Resources/Images/Gifs/
+      - BASE_IMG_PATH=./Resources/Images/
+      - BASE_VID_PATH=./Resources/Vids/
+      - BASE_WEBM_PATH=./Resources/Images/Webms/
+      - SEVENGMA_PATH=./Resources/7gma
+      - ASSEMBLE_IMG_PATH=SevengmA
+      - FILE_PARAM=
+    volumes:
+      - ./Resources:/usr/src/app/Resources
