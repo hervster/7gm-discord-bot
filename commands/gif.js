@@ -1,4 +1,4 @@
-const { MessageAttachment, MessageEmbed, Message } = require('discord.js');
+const { AttachmentBuilder } = require('discord.js');
 
 module.exports = async function (msg, args)
 {
@@ -7,7 +7,7 @@ module.exports = async function (msg, args)
     const fileExt = '.gif';
     const gifName = args[0];
 
-    const file = new MessageAttachment(baseFilePath + gifName + fileExt + fileParam );
+    const file = new AttachmentBuilder(baseFilePath + gifName + fileExt + fileParam );
 
     if (gifName === undefined)
         msg.reply("Please include a name")

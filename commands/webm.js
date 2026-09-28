@@ -1,4 +1,4 @@
-const { MessageAttachment, MessageEmbed, Message } = require('discord.js');
+const { AttachmentBuilder } = require('discord.js');
 
 module.exports = async function (msg, args)
 {   
@@ -7,7 +7,7 @@ module.exports = async function (msg, args)
     const fileExt = '.webm';
     const webmName = args[0];
 
-    const file = new MessageAttachment(baseFilePath + webmName + fileExt + fileParam );
+    const file = new AttachmentBuilder(baseFilePath + webmName + fileExt + fileParam );
 
     if (webmName === undefined)
         msg.reply("Please include a name")

@@ -1,10 +1,13 @@
-const { MessageEmbed, Message } = require('discord.js');
+const { EmbedBuilder } = require('discord.js');
 
-const helpEmbed = new MessageEmbed()
+const helpEmbed = new EmbedBuilder()
     .setColor('#CCCCFF')
     .setTitle('List of Commands')
     .setURL('https://github.com/hervster/7gm-discord-bot/blob/main/commands.js')
-    .setAuthor('Herve Nyemeck (Aleph)', 'https://github.com/hervster/7gm-discord-bot/blob/main/Resources/Images/KiryuTechTips.png?raw=true', 'https://discord.js.org')
+    .setAuthor({
+        name: 'Herve Nyemeck (Aleph)',
+        iconURL: 'https://github.com/hervster/7gm-discord-bot/blob/main/Resources/Images/KiryuTechTips.png?raw=true',
+        url: 'https://discord.js.org'})
     .setDescription('Command list for the Good Man Bot in the 7 Good Men (With Families) Discord Server')
     .setThumbnail('https://github.com/hervster/7gm-discord-bot/blob/main/Resources/Images/2Face.png?raw=true')
     .addFields(

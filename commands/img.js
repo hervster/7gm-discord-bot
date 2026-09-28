@@ -1,4 +1,4 @@
-const { MessageAttachment, MessageEmbed, Message } = require('discord.js');
+const { AttachmentBuilder } = require('discord.js');
 
 module.exports = async function (msg, args)
 {
@@ -7,7 +7,7 @@ module.exports = async function (msg, args)
     const fileExt = '.png';
     const imgName = args[0];
 
-    const file = new MessageAttachment(baseFilePath + imgName + fileExt + fileParam );
+    const file = new AttachmentBuilder(baseFilePath + imgName + fileExt + fileParam );
 
     if (imgName === undefined)
         msg.reply("Please include a name")

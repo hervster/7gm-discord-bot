@@ -1,4 +1,4 @@
-const { MessageAttachment, MessageEmbed, Message } = require('discord.js');
+const { AttachmentBuilder } = require('discord.js');
 
 module.exports = async function (msg, args)
 {   
@@ -7,7 +7,7 @@ module.exports = async function (msg, args)
     const fileExt = '.mp4';
     const vidName = args[0];
 
-    const file = new MessageAttachment(baseFilePath + vidName + fileExt + fileParam );
+    const file = new AttachmentBuilder(baseFilePath + vidName + fileExt + fileParam );
 
     if (vidName === undefined)
         msg.reply("Please include a name")

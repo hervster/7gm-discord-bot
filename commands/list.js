@@ -1,8 +1,8 @@
-const { MessageAttachment, MessageEmbed, Message } = require('discord.js');
+const { EmbedBuilder } = require('discord.js');
 // const fetch = require('fetch');
 const fs = require('fs');
 
-let listEmbed = new MessageEmbed();
+let listEmbed = new EmbedBuilder();
 
 module.exports = async function (msg, args)
 {
@@ -26,13 +26,13 @@ module.exports = async function (msg, args)
             {
                 if ( item.substring(item.length-4, item.length) === '.gif' )
                 {
-                    listEmbed.addField( "GIF", item.substring( 0, item.length-4), true ) 
+                    listEmbed.addFields({name: "GIF", value: item.substring(0, item.length - 4), inline: true }) 
                 } 
             } 
             )
             
             msg.channel.send( { embeds: [listEmbed] } );
-            listEmbed = new MessageEmbed();
+            listEmbed = new EmbedBuilder();
 
             break;
 
@@ -46,12 +46,12 @@ module.exports = async function (msg, args)
             {
                 if ( item.substring(item.length-4, item.length) === '.mp4' )
                 {
-                    listEmbed.addField( "VID", item.substring( 0, item.length-4), true ) 
+                    listEmbed.addFields({name: "VID", value: item.substring(0, item.length - 4), inline: true }) 
                 } 
             } 
             )
             msg.channel.send( { embeds: [listEmbed] } );
-            listEmbed = new MessageEmbed();
+            listEmbed = new EmbedBuilder();
 
             break;
 
@@ -66,13 +66,13 @@ module.exports = async function (msg, args)
             {
                 if ( item.substring(item.length-4, item.length) === '.png' )
                 {
-                    listEmbed.addField( "IMG", item.substring( 0, item.length-4), true ) 
+                    listEmbed.addFields({name: "IMG", value: item.substring(0, item.length - 4), inline: true }) 
                 } 
             } 
             )
 
             msg.channel.send( { embeds: [listEmbed] } );
-            listEmbed = new MessageEmbed();
+            listEmbed = new EmbedBuilder();
 
             break;
 
@@ -88,13 +88,13 @@ module.exports = async function (msg, args)
             {
                 if ( item.substring(item.length-5, item.length) === '.webm' )
                 {
-                    listEmbed.addField( "WEBM", item.substring( 0, item.length-5), true ) 
+                    listEmbed.addFields({name: "WEBM", value: item.substring(0, item.length - 5), inline: true })
                 } 
             } 
             )
 
             msg.channel.send( { embeds: [listEmbed] } );
-            listEmbed = new MessageEmbed();
+            listEmbed = new EmbedBuilder();
             
             break;
 
