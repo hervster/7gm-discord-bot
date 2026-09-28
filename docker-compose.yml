@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  7gm-bot:
+    build:
+    container_name: 7gm-bot
+    restart: unless-stopped
+    environment:
